@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  loadedFeature = 'recipes';  
+ 
+  constructor() {
+  }
+
+  onMenuItemClicked(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
