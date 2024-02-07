@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     selector:'app-header',
@@ -6,11 +6,5 @@ import { Component, EventEmitter, Output } from "@angular/core";
     styleUrls: ['./header.component.css']
 
 })
-export class HeaderComponent{
-
-    @Output() menuItemClickedEvent = new EventEmitter<string>();
-
-    public menuItemClicked(linkName: string): void{
-        this.menuItemClickedEvent.emit(linkName);
-    }
+export class HeaderComponent{   
 }
