@@ -13,7 +13,9 @@ export class RecipeService {
     }
 
     private recipes: Recipe[] = [
-        new Recipe('Test recipe',
+        new Recipe(
+            1,
+            'Test recipe',
             'Delicious test recipe',
             'https://hips.hearstapps.com/hmg-prod/images/crepes-lead-64347419487e4.jpg',
             [
@@ -21,7 +23,8 @@ export class RecipeService {
                 new Ingredient('Milk', 3),
                 new Ingredient('Flower', 4),
             ]),
-        new Recipe('Test Recipe 2',
+        new Recipe(2, 
+         'Test Recipe 2',
          'Another delicious test recipe',
           'https://cdn.loveandlemons.com/wp-content/uploads/2020/03/pantry-recipes-2.jpg',
           [
@@ -39,6 +42,10 @@ export class RecipeService {
 
     addRecipeIngredientsToShoppingList(recipe: Recipe): void{
         this.shoppingListService.addIngredients(recipe.ingredients)
+    }
+
+    getRecipe(id: number): Recipe{
+        return this.recipes.find(r=>r.id==id);
     }
 
 
