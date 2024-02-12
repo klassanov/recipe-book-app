@@ -22,7 +22,12 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a style="cursor: pointer;" (click)="onAddToShoppingList()">To Shopping List</a></li>
-                <li><a style="cursor: pointer;">Edit</a></li>
+                <!-- Works, but it can be also done by a click listener -->
+                <!-- <li><a style="cursor: pointer;" routerLink="edit">Edit</a></li> -->
+                
+                <!-- Click listener on link way -->
+                <li><a style="cursor: pointer;" (click)="onEditRecipe()">Edit</a></li>
+                
                 <li><a style="cursor: pointer;">Delete Recipe</a></li>
             </ul>
         </div>
